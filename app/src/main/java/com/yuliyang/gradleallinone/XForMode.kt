@@ -57,7 +57,7 @@ class XForMode @JvmOverloads constructor(context: Context, attrs: AttributeSet? 
         //绘制背景图片
 
 //最后设置为空
-        paint.xfermode = PorterDuffXfermode(PorterDuff.Mode.DST_IN)
+        paint.xfermode = PorterDuffXfermode(PorterDuff.Mode.DST_OUT)
         canvas.drawBitmap(getBitmap(), 0f, 0f, paint)
 
 //绘制矩形
