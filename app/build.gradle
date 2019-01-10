@@ -24,6 +24,16 @@ android {
     }
 }
 
+//formater {
+//    dateTimeFormat "yyyy-MM-dd HH:mm:ss"
+//}
+
+//task say {
+//    println "xxxxxxxxxxxxxxx"
+//}
+//
+//say.dependsOn clean
+
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"

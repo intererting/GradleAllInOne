@@ -6,8 +6,9 @@ import org.gradle.api.Project
 class TestPlugin implements Plugin<Project> {
     @Override
     void apply(Project project) {
-        project.task('testTask') << {
-            println "Hello gradle plugin"
+        def task = project.task('testTask') {
+            print(project.rootDir)
         }
+//        task.dependsOn("assembleDebug")
     }
 }
