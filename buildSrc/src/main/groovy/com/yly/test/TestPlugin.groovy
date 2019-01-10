@@ -9,6 +9,6 @@ class TestPlugin implements Plugin<Project> {
         def task = project.task('testTask') {
             print(project.rootDir)
         }
-//        task.dependsOn("assembleDebug")
+        task.dependsOn("assembleDebug")
     }
 }

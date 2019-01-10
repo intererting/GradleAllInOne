@@ -6,9 +6,6 @@ import org.gradle.api.Project
 class PluginWithTask implements Plugin<Project> {
     @Override
     void apply(Project project) {
-//        project.apply plugin: 'com.google.osdetector'
-//        project.extensions.create("formater", ForamaterExtension)
-
         project.afterEvaluate {
             def android = project.extensions.android
             android.buildTypes.all { buildType ->
