@@ -31,6 +31,7 @@ class MainActivity : AppCompatActivity() {
             tv.setTextColor(Color.MAGENTA)
             tv
         }
+
     }
 
     override fun onResume() {
