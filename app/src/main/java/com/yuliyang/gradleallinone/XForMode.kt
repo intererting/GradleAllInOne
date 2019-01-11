@@ -57,7 +57,6 @@ class XForMode @JvmOverloads constructor(context: Context, attrs: AttributeSet? 
         paint.xfermode = PorterDuffXfermode(PorterDuff.Mode.DST_OUT)
         canvas.drawBitmap(getBitmap(), 0f, 0f, paint)
 
-//绘制矩形
         canvas.restoreToCount(sc)
 
 

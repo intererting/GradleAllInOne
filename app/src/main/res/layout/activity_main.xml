@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
     <com.yuliyang.gradleallinone.XForMode
@@ -11,4 +12,21 @@
         android:layout_height="200dp"
         android:scaleType="fitXY" />
 
+    <com.yuliyang.gradleallinone.ClipTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <com.yuliyang.gradleallinone.ShimmerTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="这是一段测试文字"
+        android:textSize="24sp" />
+
+    <TextSwitcher
+        android:id="@+id/textSwitcher"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inAnimation="@anim/slide_in_bottom"
+        android:outAnimation="@anim/slide_out_top"
+        android:textAlignment="center" />
 </LinearLayout>
