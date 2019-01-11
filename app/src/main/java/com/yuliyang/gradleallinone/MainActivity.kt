@@ -14,6 +14,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
+import java.nio.charset.Charset
 
 class MainActivity : AppCompatActivity() {
 
@@ -27,9 +28,25 @@ class MainActivity : AppCompatActivity() {
         textSwitcher.setFactory {
             val tv = TextView(this@MainActivity)
             tv.textSize = 40f
-            // å­—ä½“é¢œè‰²å“çº¢
+            // ×ÖÌåÑÕÉ«Æ·ºì
             tv.setTextColor(Color.MAGENTA)
             tv
+        }
+
+        GlobalScope.launch(Dispatchers.IO) {
+            val builder = ProcessBuilder("ping", "www.baidu.com")
+            val progress = builder.start()
+            val byteArray = ByteArray(1024)
+            var hasRead: Int
+
+            while (progress.inputStream.read(byteArray).also {
+                        hasRead = it
+                    } != -1) {
+                if (hasRead > 0) {
+                    println(String(byteArray, charset = Charset.forName("gbk")))
+                    break
+                }
+            }
         }
 
     }
