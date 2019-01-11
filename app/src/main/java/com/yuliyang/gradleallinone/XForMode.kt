@@ -3,18 +3,15 @@ package com.yuliyang.gradleallinone
 import android.annotation.SuppressLint
 import android.content.Context
 import android.graphics.*
-import android.graphics.drawable.BitmapDrawable
 import android.os.Build
 import android.support.annotation.RequiresApi
 import android.support.v7.widget.AppCompatImageView
 import android.util.AttributeSet
-import android.view.View
-import android.widget.ImageView
 
 
 @RequiresApi(Build.VERSION_CODES.KITKAT)
 class XForMode @JvmOverloads constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) :
-        AppCompatImageView(context, attrs, defStyleAttr) {
+    AppCompatImageView(context, attrs, defStyleAttr) {
 
     val paint by lazy {
         Paint().apply {
@@ -52,7 +49,7 @@ class XForMode @JvmOverloads constructor(context: Context, attrs: AttributeSet? 
     @SuppressLint("DrawAllocation")
     override fun onDraw(canvas: Canvas) {
         val sc = canvas.saveLayerAlpha(0f, 0f, width.toFloat(), height.toFloat(), 255, Canvas.ALL_SAVE_FLAG)
-        canvas.drawBitmap(BitmapFactory.decodeResource(resources, R.drawable.test1), 0f, 0f, Paint())
+        canvas.drawBitmap(BitmapFactory.decodeResource(resources, R.drawable.test), 0f, 0f, Paint())
 
         //绘制背景图片
 
@@ -94,7 +91,7 @@ class XForMode @JvmOverloads constructor(context: Context, attrs: AttributeSet? 
 
         val canvasB = Canvas(bitmapB);
         canvasB.drawCircle(
-                200f, 200f, 200f, paint
+            200f, 200f, 200f, paint
         )
         return bitmapB
     }
