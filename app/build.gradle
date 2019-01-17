@@ -43,6 +43,8 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.0.1'
+    implementation("com.squareup.moshi:moshi:1.8.0")
+    implementation("com.squareup.moshi:moshi-kotlin:1.8.0")
 }
 
 androidExtensions {
